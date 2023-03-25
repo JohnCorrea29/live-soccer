@@ -1,0 +1,23 @@
+.container-mini-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../../../../public/home/mini-banner.jpg');
+    background-size: cover;
+    background-position: 0px 50%;
+    background-repeat: no-repeat;
+    height: 160px;
+    opacity: 0.9;
+    background-color: #000;
+    filter: brightness(50%);
+}
+
+.text-mini-banner {
+    position: absolute;
+    z-index: 999;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

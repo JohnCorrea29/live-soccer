@@ -1,0 +1,49 @@
+.container-view-life {
+    background-color: #000;
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.categories,
+.list-leagues,
+.list-live {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.categories {
+    gap: 0;
+    justify-content: space-around;
+}
+
+.categories a,
+.title-en-vivo {
+    color: #fff;
+}
+
+.title-en-vivo {
+    position: relative;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.title-en-vivo::after {
+    content: "";
+    position: absolute;
+    right: auto;
+    bottom: -2px;
+    height: 5px;
+    left: 0;
+    border-bottom: 2px solid #d92533;
+    width: 50%;
+}
+
+.title-en-vivo span:hover {
+    cursor: pointer;
+    color: #d92533;
+}
