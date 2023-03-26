@@ -6,7 +6,11 @@
     height: 50px;
     border-radius: 50px;
     border: none;
-    background-color: #d92533;
+    background-color: #2E9AFE;
     color: #fff;
     cursor: pointer;
+}
+
+.icon-top {
+    filter: invert(1);
 }

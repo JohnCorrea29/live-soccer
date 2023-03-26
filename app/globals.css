@@ -6,3 +6,34 @@
     margin: 0;
     box-sizing: content-box;
 }
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none !important;
+}
+
+*::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-button:increment,
+*::-webkit-scrollbar-button {
+    display: none !important;
+}
+
+*::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #2E9AFE;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.container {
+    margin-top: 70px;
+}

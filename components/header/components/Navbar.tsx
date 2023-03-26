@@ -4,11 +4,11 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div>
-        <nav>
-            <Link href="/">Home</Link>
-            <Link href="/">Home</Link>
-            <Link href="/">Home</Link>
+    <div className='container-nav-bar'>
+        <nav className='nav-bar'>
+            <Link href="/analyts" className='nav-bar-link'>Analisis</Link>
+            <Link href="/" className='nav-bar-link'>Predicciones</Link>
+            <Link href="/" className='nav-bar-link'>Competiciones</Link>
         </nav>
     </div>
   )

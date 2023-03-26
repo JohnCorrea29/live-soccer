@@ -1,5 +1,7 @@
 "use client"
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react'
+import iconTop from '../../public/backToTop/back-to-top.svg'
 import './back-to-top.css'
 
 const BackToTop = () => {
@@ -20,7 +22,9 @@ const BackToTop = () => {
     }
 
     return (
-        <button className='back-to-top' onClick={() => { handlerClickBackToTop() }}>Top</button>
+        <button className='back-to-top' onClick={() => { handlerClickBackToTop() }}>
+            <Image src={iconTop} alt="Icon top" className='icon-top'/>
+        </button>
     )
 }
 

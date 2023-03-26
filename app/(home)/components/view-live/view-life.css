@@ -6,7 +6,7 @@
 }
 
 .categories,
-.list-leagues,
+.container-list-leagues,
 .list-live {
     width: 100%;
     display: flex;
@@ -39,11 +39,23 @@
     bottom: -2px;
     height: 5px;
     left: 0;
-    border-bottom: 2px solid #d92533;
+    border-bottom: 2px solid #2E9AFE;
     width: 50%;
 }
 
 .title-en-vivo span:hover {
     cursor: pointer;
-    color: #d92533;
+    color: #2E9AFE;
+}
+
+.list-leagues {
+    max-height: 100%;
+    height: 220px;
+    overflow-y: scroll;
+}
+
+.name-league {
+    text-align: center;
+    list-style: none;
+    color: #fff;
 }

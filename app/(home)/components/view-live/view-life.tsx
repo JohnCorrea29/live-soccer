@@ -1,27 +1,30 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import live from '../../../../public/home/view-life.jpg'
 import './view-life.css'
-import axios from 'axios';
 
 const ViewLife = () => {
+    const [matchs, setMach] = useState([]);
 
-    const options = {
-        method: 'GET',
-        url: 'https://api-football-v1.p.rapidapi.com/v3/',
-        headers: {
-          'X-RapidAPI-Key': 'fd35567da4msh9b4ebc9bbdc746cp1a5647jsna05913a2dd7e',
-          'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
-        }
-      };
-      
-      axios.request(options).then(function (response) {
-          console.log(response.data);
-      }).catch(function (error) {
-          console.error(error);
-      });
+    useEffect(() => {
+        fetch('https://v3.football.api-sports.io/leagues/', {
+            method: "GET",
+            headers: {
+                "x-rapidapi-key": "17410b01e7c00ad8b34a7fbe278aacc2",
+                "x-rapidapi-host": "v3.football.api-sports.io"
+            }
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                setMach(data.response)
+            })
+            .catch((error) => console.log("error", error))
+    }, [])
+
+
+    console.log("MATCH", matchs)
 
     return (
         <div className='container-view-life'>
@@ -37,13 +40,15 @@ const ViewLife = () => {
                     <Link href="/">Live 1</Link>
                     <Link href="/">Live 1</Link>
                 </div>
-                <div className="list-leagues">
+                <div className="container-list-leagues">
                     <p className='title-en-vivo'>Ligas</p>
-                    <Link href="/">Liga 1</Link>
-                    <Link href="/">Liga 1</Link>
-                    <Link href="/">Liga 1</Link>
-                    <Link href="/">Liga 1</Link>
-                    <Link href="/">Liga 1</Link>
+                    <ul className='list-leagues'>
+                        {
+                            matchs.map((match: any, i) => (
+                                <li key={i} className="name-league">{match.league.name}</li>
+                            ))
+                        }
+                    </ul>
                 </div>
             </div>
         </div>

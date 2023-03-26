@@ -5,7 +5,7 @@ const MiniBanner = () => {
   return (
     <div className='container-mini-banner'>
         <p className="text-mini-banner">
-            Estadisticas
+          Bienvenido a Live Soccer Now. Aquí podrás encontrar tus partidos favoritos, resultados, predicciones y mucho más.
         </p>
     </div>
   )

@@ -4,7 +4,7 @@ import ViewLife from './components/view-live/view-life'
 
 export default function Page(){
   return (
-    <div>
+    <div className='container'>
       <MiniBanner/>
       <ViewLife/>
     </div>
